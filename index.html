@@ -1,0 +1,45 @@
+<style>
+    td {
+        background: grey;
+        color: white;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 70px;
+    }
+    td:hover {
+        background: lightgreen;
+        cursor: pointer;
+    }
+</style>
+<h1>Jogo da Velha</h1>
+<table>
+    <tr>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+    </tr>
+    <tr>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+    </tr>
+    <tr>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+        <td onclick="marcar(this)"></td>
+    </tr>
+</table>
+<script>
+    var jogador = "⭐️"
+    
+    function marcar(td) {
+        td.innerText = jogador
+
+        if (jogador == "⭐️") {
+            jogador = "😡"
+        } else {
+            jogador = "⭐️"
+        }
+    }
+</script>
